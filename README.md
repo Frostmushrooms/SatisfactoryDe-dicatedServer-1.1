@@ -58,3 +58,5 @@ Enjoy your game!
 ## 维护者联系方式 Maintainer contact information
 
 冰霜蘑菇 [QQ](https://wpa.qq.com/msgrd?v=3&uin=1056484009&site=qq&menu=yes) Simple Chinese Only
+
+| 根据1.0版本修订| Revised from version 1.0 |
