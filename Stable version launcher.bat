@@ -21,7 +21,7 @@ echo Please do not close this window
 echo QQ:1056484009 QQgroup:264127585
 
 taskkill /f /t /im FactoryServer-Win64-Shipping-Cmd.exe >nul 2>nul
-explorer "%~dp0demotion.bat"
+explorer "%~dp0demotion7777.bat"
 
 
 set PORT=8888
@@ -68,7 +68,7 @@ if !found! == 0 (
     echo %date:~0,11%%time% Satisfactory Server Error, restarting
     powershell -Command "& { [Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime] > $null; $template = [Windows.UI.Notifications.ToastNotificationManager]::GetTemplateContent([Windows.UI.Notifications.ToastTemplateType]::ToastText02); $xml = New-Object Windows.Data.Xml.Dom.XmlDocument; $xml.LoadXml($template.GetXml()); $toastElements = $xml.GetElementsByTagName('text'); if ($toastElements.Count -ge 2) { $titleNode = $xml.CreateTextNode('Satisfactory Server Error'); $toastElements.Item(0).AppendChild($titleNode) > $null; $contentNode = $xml.CreateTextNode('Detected UDP port %port% closed, restarting server.'); $toastElements.Item(1).AppendChild($contentNode) > $null; $toast = [Windows.UI.Notifications.ToastNotification]::new($xml); $notifier = [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier('Satisfactory Dedicated Server'); $notifier.Show($toast); } else { Write-Host 'Unable to create toast notification.' } }" >nul 2>nul
     timeout /T 5 >nul
-    explorer "%~dp0demotion.bat"
+    explorer "%~dp0demotion7777.bat"
 ) else (
     echo %date:~0,11%%time% Satisfactory Server is working.
     echo %date:~0,11%%time% Satisfactory Server is working.>> %log_file%
