@@ -1,19 +1,4 @@
 @echo off
-setlocal enabledelayedexpansion
-title checking for admin rights
->nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-if '%errorlevel%' NEQ '0' (
-title waiting for admin rights
-mode con cols=20 lines=1
-goto UACPrompt
-) else ( goto start )
-:UACPrompt
-echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
-"%temp%\getadmin.vbs"
-exit /B
-:start
-
 mkdir "%~dp0steamcmd7777" >nul 2>nul
 CD "%~dp0steamcmd7777"
 curl -o "steamcmd.zip" "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip"
